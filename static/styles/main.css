@@ -1,0 +1,61 @@
+@import './reset.css';
+
+:root {
+  --primary-font-family: 'Gowun Batang', 'Times New Roman', Times, serif;
+  --secondary-font-family: 'Zeyada', cursive;
+  --alternative-font-family: 'Roboto', sans-serif;
+  --color-news: hsl(51, 25%, 84%);
+  --color-text: hsl(27, 24%, 13%);
+  --color-link: hsl(212, 59%, 46%);
+  --color-alert: hsl(4, 59%, 46%);
+  --static-font-family: var(--primary-font-family);
+  --dynamic-font-family: var(--secondary-font-family);
+}
+
+* {
+  box-sizing: border-box;
+  margin: 0;
+  padding: 0;
+}
+
+html, body, h1, h2, h3, h4, h5, h6, a, p, ul, li, ol,
+figure, figcaption, blockquote, dl, dd, dt,
+hr, pre, table, fieldset, legend, textarea,
+input[type="submit"], input[type="button"],
+input[type="reset"], button, address,
+caption, cite, code, dfn, em, strong, th,
+var, optgroup, option, label, menu, nav,
+section, summary, time, mark, audio, video,
+details {
+  font-family: var(--static-font-family);
+  background-color: transparent;
+}
+
+html, body {
+  font-family: var(--static-font-family);
+  font-size: 16px;
+  line-height: 1.5rem;
+  color: var(--color-text);
+  background-color: var(--color-news);
+}
+
+a {
+  color: var(--color-link);
+  text-decoration: none;
+
+  &:hover {
+    text-decoration: underline;
+  }
+}
+
+.sr-only {
+  position: absolute;
+  width: 1px;
+  height: 1px;
+  padding: 0;
+  margin: -1px;
+  overflow: hidden;
+  clip: rect(0, 0, 0, 0);
+  white-space: nowrap;
+  border-width: 0;
+}
